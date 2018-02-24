@@ -1,0 +1,18 @@
+<form class="form-inline my-2 my-lg-0" #searchForm="ngForm" (ngSubmit)="search()">
+  
+  <input class="form-control mr-sm-2" type="text" name="search" laceholder="search for image..." ngModel required>
+  <button class="btn btn-secondary my-2 my-sm-0" type="submit" [disabled]="searchForm.invalid">    
+    Search 
+  </button>
+
+</form>
+
+<form class="form-inline my-2 my-lg-0" #showForm="ngForm" (ngSubmit)="check()">
+  
+  <input class="form-control mr-sm-2" type="text" name="username" laceholder="input username..." ngModel required>
+  <button class="btn btn-secondary my-2 my-sm-0" type="submit" [disabled]="showForm.invalid">    
+    ShowAddItems
+</button>
+  
+
+</form>

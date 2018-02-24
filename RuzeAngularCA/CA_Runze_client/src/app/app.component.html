@@ -1,0 +1,18 @@
+<h1>
+  Giphy Search
+</h1>
+<div>
+  <label>Total Number: {{totalnumber}}</label>
+</div>
+<app-search (keyword)="getImages($event)" (urls)="checkItem($event)">
+</app-search>
+
+<app-show-images *ngFor="let r of this.images" (imageClicked)="saveImg($event)"  (user)="saveUserName($event)"[img]=r>
+</app-show-images>
+
+<app-show-images *ngFor="let t of this.urllist" [img]=t>
+</app-show-images>
+
+<div class="w3-bar" *ngFor="let l of this.totalpage">
+  <li><button class="btn btn-secondary my-2 my-sm-0" (click)="changePage(l)">{{l}}</button></li>
+</div>

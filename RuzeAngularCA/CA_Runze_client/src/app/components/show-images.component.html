@@ -1,0 +1,16 @@
+
+<div class="card">
+<div class="card-body text-secondary">
+    <img [src]="img" width="200">
+</div>
+
+
+<form class="form-inline my-2 my-lg-0" #addForm="ngForm" (ngSubmit)="passUrl()">
+  
+    <input class="form-control mr-sm-2" type="text" name="usera" laceholder="input username..." ngModel required>
+    <button class="btn btn-secondary my-2 my-sm-0" type="submit" [disabled]="addForm.invalid">    
+        AddItem
+    </button>
+    
+  
+</form>
